@@ -36,6 +36,20 @@ body {
   color: #666;
 }
 
+.project-info {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border-left: 4px solid #007bff;
+}
+
+.project-info p {
+  margin-bottom: 5px;
+  color: #495057;
+  font-size: 14px;
+}
+
 .upload-area {
   background: white;
   border: 2px dashed #ddd;
@@ -96,11 +110,54 @@ body {
   color: #333;
   margin-bottom: 10px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.file-path {
+  color: #007bff;
+  font-family: monospace;
+  background: #f8f9fa;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.text-index {
+  color: #6c757d;
+  font-size: 12px;
+  background: #e9ecef;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.status {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.status-0 {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-1 {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-2 {
+  background: #d4edda;
+  color: #155724;
 }
 
 .translation-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 15px;
 }
 
@@ -188,5 +245,18 @@ body {
 
   .container {
     padding: 10px;
+  }
+
+  .translation-key {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .translation-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 }
